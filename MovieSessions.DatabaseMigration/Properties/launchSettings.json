@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MovieSessions.DatabaseMigration": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "TEST"
+      }
+    }
+  }
+}

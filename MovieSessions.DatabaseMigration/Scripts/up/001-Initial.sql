@@ -1,0 +1,16 @@
+﻿BEGIN TRANSACTION;
+CREATE TABLE IF NOT EXISTS "Movies" (
+	"Id"	TEXT NOT NULL,
+	"Draft"	INTEGER NULL,
+	"Title"	TEXT NOT NULL,
+	"Runtime"	INTEGER NOT NULL,
+	"Synopsis"	TEXT NULL,
+	"Director"	TEXT NULL,
+	"Actors"	TEXT NULL,
+	"Poster"	TEXT NULL,
+	"YouTubeEmbed"	TEXT NULL,
+	"Rating"	INTEGER NOT NULL,
+	CONSTRAINT "PK_Movies" PRIMARY KEY("Id")
+);
+COMMIT;
+

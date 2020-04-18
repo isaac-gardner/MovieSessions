@@ -1,0 +1,19 @@
+﻿@model MovieSessions.Features.Movies.Add.Command
+@{
+    ViewBag.Title = "Add Movie";
+}
+
+<h1>@ViewBag.Title</h1>
+
+@using (Html.BeginForm())
+{
+    @Html.Input(x => x.Title)
+    @Html.Input(x => x.Synopsis)
+    @Html.Input(x => x.Runtime)
+    @Html.Input(x => x.Rating)
+    @Html.Input(x => x.Director)
+    <div>
+        @Html.SaveButton()
+        @Html.CancelButton(Url.Action("Index"))
+    </div>
+}

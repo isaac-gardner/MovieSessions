@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Scripts\up\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="roundhouse" Version="1.2.0" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.112" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="packages/roundhouse/1.2.0/tools/rh.exe" CopyToPublishDirectory="Always">
+      <Link>rh.exe</Link>
+    </None>
+    <None Include="Scripts/**/*.*" CopyToPublishDirectory="Always" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Scripts\up\001-Initial.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+</Project>
